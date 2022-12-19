@@ -1,0 +1,100 @@
+{
+	"en": {
+		"title": "Donneftetrans",
+		"mainBlocks": [
+			{
+				"id": 1,
+				"title": "Cargo transportation",
+				"description": "Sea-river transportation of the cargoes: Donneftetrans performs transportation services for crude oil and wide range of chemical/oil products. IMO classed 3 – 6 cargoes are accepted for carriage include but not limited to: crude oil, petroleum, diesel oil, sunflower seed oil, etc. Trading areas are Caspian Sea, Mediterranean Sea, Don and Volga rivers."
+			},
+			{
+				"id": 2,
+				"title": "Technical management",
+				"description": "Technical management: Company provides technical management for tanker fleet: ship supply, repairs, technical supervision, scheduled and unscheduled surveys, etc. Strong connections with RMRS and Russian Federal Agency of Sea and River Transport allow us to minimize owners’ costs and vessels off time."
+			},
+			{
+				"id": 3,
+				"title": "Commercial management",
+				"description": "Having a direct contact with all primary trading companies of Caspian and Mediterranean regions, Donneftetrans is able to provide a variety of cargoes for vessels under company’s commercial management to maximize their financial performance."
+			},
+			{
+				"id": 4,
+				"title": "Crewing management",
+				"description": "Company performs crew selection for vessels of any type, flag, size, etc. Our seafarers’ database is being updated and expanded on a constant basis, while ship manning and social welfare of crew are always processed in strict accordance with ITF requirements."
+			}
+		],
+		"requests": [
+			{
+				"inputs": [
+					"Full Name",
+					"Phone",
+					"E-mail",
+					"Text"
+				],
+				"address": "mail@gmail.com"
+			},
+			{
+				"inputs": [
+					"Full Name",
+					"Phone",
+					"E-mail",
+					"Text",
+					"Cargo",
+					"Quantity, tons",
+					"Loading Port",
+					"Discharging Port"
+				],
+				"address": "dmail@gmail.com"
+			}
+		]
+	},
+	"ru": {
+		"title": "Доннефтетранс",
+		"mainBlocks": [
+			{
+				"id": 1,
+				"title": "Перевозка грузов",
+				"description": "Перевозка морем и рекой: Доннефтетранс оказывает услуги по перевозке нефти и широкой номенклатуры нефтепродуктов. Принимаются грузы классов опасности 3 – 6, согласно классификации ИМО: сырая нефть, бензин, дизельное топливо, подсолнечное масло и т.д. Перевозки осуществляются в Каспийском и Средиземноморском регионах, а также на реках Волга и Дон."
+			},
+			{
+				"id": 2,
+				"title": "Технический менеджмент",
+				"description": "Технический менеджмент: Доннефтетранс предоставляет услуги по техническому менеджменту танкерного флота: организация снабжения и ремонта судов, технический надзор, очередные и внеочередные освидетельствования и прочее. Наличие прочных связей с РМРС и Федеральным Агентством Морского и Речного Транспорта РФ позволяет оптимизировать расходы судовладельца и время вывода судна из эксплуатации."
+			},
+			{
+				"id": 3,
+				"title": "Коммерческий менеджмент",
+				"description": "Услуги по коммерческому менеджменту включают в себя поиск оптимальной грузовой базы для судов, находящихся в менеджменте у компании для получения максимального финансового результата. Доннефтетранс имеет прямые контакты со всеми ведущими экспортно-импортными компаниями Каспийского и Средиземноморского региона, что позволяет обеспечить суда наших клиентов бесперебойной работой."
+			},
+			{
+				"id": 4,
+				"title": "Крюинг-менеджмент",
+				"description": "Компания занимается подбором экипажей на любые суда независимо от размера, флага, типа и т.д. Наша база моряков постоянно обновляется и расширяется, а комплектование экипажей и социальное обеспечение плавсостава производится в соответствии со стандартами ITF."
+			}
+		],
+		"requests": [
+			{
+				"inputs": [
+					"ФИО",
+					"Телефон ",
+					"Почта",
+					"Текст"
+				],
+				"address": "mail@gmail.com"
+			},
+			{
+				"inputs": [
+					"ФИО",
+					"Телефон ",
+					"Почта",
+					"Текст",
+					"Наименование груза",
+					"Количество груза ",
+					"Порт погрузки",
+					"Порт выгрузки "
+				],
+				"address": "dmail@gmail.com"
+			}
+		]
+	}
+}

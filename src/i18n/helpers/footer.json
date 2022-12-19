@@ -1,0 +1,23 @@
+{
+	"blocks": [
+		{
+			"id": "address",
+			"icon": "map-location.svg",
+			"defaultMessage": "Corn Neck Rd, New Shoreham, RI 02807, USA"
+		},
+		{
+			"id": "phone",
+			"icon": "phone.svg",
+			"defaultMessage": "Tel. +38099-443-445"
+		},
+		{
+			"id": "info",
+			"icon": "info.svg",
+			"defaultMessage": "Info"
+		}
+	],
+	"copyright": {
+		"id": "copyright",
+		"defaultMessage": "Donneftetrans. All rights reserved"
+	}
+}

@@ -1,0 +1,131 @@
+$medium: "1600px";
+$laptop: "1366px";
+$mobile: "540px";
+
+.block {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	font-family: var(--font-1-semi-bold);
+	padding: 20px 14px 14px 14px;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+	transition: background-color 0.5s;
+	box-shadow: 0px 0px 12px 0px rgba(107, 107, 107, 0.4);
+	margin: 20px;
+	max-width: 500px;
+	max-height: 221px;
+	border: 2px solid var(--color-second);
+	animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+	@media (max-width: $mobile) {
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+	&:nth-child(1) {
+		margin: 0;
+	}
+	&:nth-child(2) {
+		animation-delay: 0.2s;
+		margin: 34px 179px 1px 1px;
+	}
+	&:nth-child(3) {
+		animation-delay: 0.4s;
+		margin: 136px 1px 1px 91px;
+	}
+	&:nth-child(4) {
+		animation-delay: 0.6s;
+		margin: 111px 0 1px 0px;
+	}
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.6);
+		.border {
+			opacity: 1;
+		}
+	}
+	.border {
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-image: url(/assets/images/svg/card-left-border.svg);
+		background-repeat: no-repeat;
+		height: 100%;
+		width: 10px;
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+	& > div {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 14px;
+		& > span {
+			display: block;
+			background-repeat: no-repeat;
+			width: 30px;
+			height: 30px;
+			margin-left: 20px;
+		}
+	}
+	h2 {
+		text-transform: uppercase;
+		font-size: 24px;
+		margin-left: 20px;
+		line-height: 1.2em;
+		@media (max-width: $mobile) {
+			font-size: 18px;
+		}
+	}
+	& > p {
+		color: #000;
+		max-width: 600px;
+		line-height: 1.3em;
+		margin-bottom: 40px;
+		text-align: left;
+		text-indent: 1.5em;
+		@media (max-width: $mobile) {
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: $medium) {
+	.block {
+		&:nth-child(2) {
+			margin: -25px 125px 1px 1px;
+		}
+		&:nth-child(3) {
+			margin: 59px 1px 1px 91px;
+		}
+		&:nth-child(4) {
+			margin: 28px 0 1px 0px;
+		}
+	}
+}
+@media (max-width: $laptop) {
+	.block {
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4) {
+			margin: 0 0 20px;
+		}
+	}
+}
+
+@keyframes slide-in-blurred-left {
+	0% {
+		transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+		transform-origin: 100% 50%;
+		backdrop-filter: none;
+		filter: blur(40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0) scaleY(1) scaleX(1);
+		transform-origin: 50% 50%;
+		backdrop-filter: blur(2px);
+		filter: blur(0);
+		opacity: 1;
+	}
+}

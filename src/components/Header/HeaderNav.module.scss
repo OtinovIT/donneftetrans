@@ -1,0 +1,18 @@
+.nav {
+	display: flex;
+	.link {
+		font-family: var(--font-1-medium);
+		text-decoration: none;
+		color: #000000;
+		transition: color 0.1s;
+		&:hover {
+			color: var(--color-third);
+		}
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+	.fogging {
+		color: #eaeaea;
+	}
+}

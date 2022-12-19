@@ -1,0 +1,22 @@
+[
+	{
+		"href": "",
+		"icon": "tech-icon-1.svg",
+		"image": "service-1.jpg"
+	},
+	{
+		"href": "",
+		"icon": "tech-icon-2.svg",
+		"image": "service-2.jpg"
+	},
+	{
+		"href": "",
+		"icon": "tech-icon-3.svg",
+		"image": "service-3.jpg"
+	},
+	{
+		"href": "",
+		"icon": "tech-icon-4.svg",
+		"image": "service-4.jpg"
+	}
+]

@@ -1,0 +1,24 @@
+{
+	"links": [
+		{
+			"id": "about",
+			"href": "/about-us",
+			"defaultMessage": "About us"
+		},
+		{
+			"id": "contacts",
+			"href": "/contacts",
+			"defaultMessage": "Contact us"
+		},
+		{
+			"id": "career",
+			"href": "/career",
+			"defaultMessage": "Career"
+		},
+		{
+			"id": "documents",
+			"href": "/documents",
+			"defaultMessage": "Document"
+		}
+	]
+}
