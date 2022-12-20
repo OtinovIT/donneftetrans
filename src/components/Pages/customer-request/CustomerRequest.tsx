@@ -6,6 +6,7 @@ import translate from '../../../i18n/translate';
 import { useAppSelector } from '../../../hooks/redux';
 import { IRequest } from '../../../types/pages/main';
 import Portal from '../../../HOC/Portal';
+import Modal from '../../UI/modal/Modal';
 
 const CustomerRequest: FC<{ content: IRequest[] }> = ({ content }) => {
 	const [isActive, setisActive] = useState(false);
@@ -42,7 +43,7 @@ const CustomerRequest: FC<{ content: IRequest[] }> = ({ content }) => {
 
 	return (<>
 		<Portal selector="#portal">
-			<div>asdaddsda</div>
+			<Modal />
 		</Portal>
 		<div className={st.wrapper + `${isActive ? ' ' + st.active : ''}`}>
 			<div className={st.bg}>

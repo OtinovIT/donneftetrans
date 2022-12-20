@@ -1,0 +1,80 @@
+.wrapper {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	backdrop-filter: blur(10px);
+	background-color: rgba(94, 94, 94, 0.74);
+	& > div {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		box-sizing: border-box;
+		width: 400px;
+		background-color: rgba(255, 255, 255, 0.37);
+		border-radius: 20px;
+		padding: 20px 20px 20px 30px;
+		border: 1px solid #fff;
+		.body {
+			font-family: var(--font-1-regular);
+			display: flex;
+			flex-direction: column;
+			& > div {
+				position: relative;
+				width: 100%;
+				padding-left: 20px;
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+				& > label {
+					position: absolute;
+					left: 30px;
+					top: 51%;
+					transform: translateY(-50%);
+					color: var(--color-first);
+					font-size: 14px;
+					cursor: text;
+					background-color: #fff;
+					padding: 2px 7px;
+					border-radius: 7px;
+					transition: top 0.2s, font-size 0.2s;
+				}
+				& > input {
+					width: calc(100% - 20px);
+					box-sizing: border-box;
+					border-radius: 5px;
+					border: 1px solid rgb(167, 167, 167);
+					font-size: 14px;
+					padding: 10px 14px;
+					outline-color: var(--color-first);
+					color: rgb(56, 56, 56);
+					&:focus ~ label {
+						font-size: 12px;
+						top: 2px;
+					}
+					&[value=""] ~ label {
+						color: red;
+					}
+					// &:hover {
+					// 	border-color: rgb(98, 98, 98);
+					// 	border-left: 2px solid var(--color-first);
+					// }
+				}
+				& > span {
+					display: block;
+					position: absolute;
+					left: -16px;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 25px;
+					height: 25px;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+		}
+	}
+}
