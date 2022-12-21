@@ -16,6 +16,7 @@ export default {
 		'btn-explore': 'Explore',
 		'btn-request.title': 'Request',
 		'btn-request.rate': 'Rate Request',
+		'btn-request.send': 'Send',
 		'btn-request.contact': 'Contact Form',
 		'main-title': 'Donneftetrans',
 		'main-services': 'Services',

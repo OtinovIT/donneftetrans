@@ -16,6 +16,7 @@ export default {
 		'btn-explore': 'Посмотреть',
 		'btn-request.title': 'Запрос',
 		'btn-request.rate': 'Запрос ставки',
+		'btn-request.send': 'Отправить',
 		'btn-request.contact': 'Контактная форма',
 		'main-title': 'Доннефтетранс',
 		'main-services': 'Услуги',
