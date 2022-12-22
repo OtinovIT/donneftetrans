@@ -1,40 +1,37 @@
-import React, { Dispatch, FC, useEffect, useState } from 'react';
+import React, { Dispatch, FC, SetStateAction, useEffect, useState } from 'react';
 import translate from '../../../i18n/translate';
 import st from './Modal.module.scss';
-
-interface IFields {
-	id: string;
-	label: string;
-	icon?: string | 'request-custom.svg';
+interface IModal {
+	content: any;
+	setisModal: Dispatch<SetStateAction<boolean>>;
 }
 
-const content = [
-	{ id: "name", label: "Full Name", icon: "request-username.svg" },
-	{ id: "phone", label: "Phone Number", icon: "request-phone.svg" },
-	{ id: "mail", label: "E-Mail", icon: "request-mail.svg" },
-	{ id: "request", label: "Request", icon: "request-text.svg" },
-]
+interface InitialObj { [id: string]: string }
 
-const Modal: FC<any> = ({setisModal}) => {
+const Modal: FC<IModal> = ({ content, setisModal }) => {
 	const [fields, setFields] = useState({});
 	const [isLoading, setLoading] = useState(false);
 
-	const getInitialObj = () => {
+	const getInitialObj = (): InitialObj => {
 		const initialObj = {};
-		content.forEach(field => initialObj[field.id] = '');
+		content.fields.forEach(field => initialObj[field.id] = '');
 		return initialObj;
 	}
 
-	const setValue = (id: string, value: any) => {
-		setFields({ ...fields, id: value });
-	};
-	const send = () => {
+	const send = (): void => {
 		setLoading(true);
 		setTimeout(() => {
 			setLoading(false);
 		}, 1000)
-		console.log(fields);
 	};
+
+	const inputType = (id: string): string => {
+		switch (id) {
+			case 'mail': return 'email';
+			case 'password': return 'password';
+			default: return;
+		}
+	}
 
 	useEffect(() => {
 		if (!Object.keys(fields).length) setFields(getInitialObj());
@@ -45,15 +42,16 @@ const Modal: FC<any> = ({setisModal}) => {
 			<div>
 				<button onClick={() => setisModal(false)} className={st.close}>&#10006;</button>
 				<div className={st.heading}>
+					<span />
 					<h2>Request Form</h2>
 				</div>
 				<div className={st.body}>
-					{content.map((field, i) => {
+					{content.fields.map((field, i) => {
 						const { id, label, icon } = field;
 						return (
 							<div key={i}>
-								<span style={{ backgroundImage: `url(/assets/images/svg/${icon || 'request-username.svg'})` }} />
-								<input onChange={e => setFields({ ...fields, [id]: e.target.value })} id={id} type="text" />
+								<span style={{ backgroundImage: `url(/assets/images/svg/${icon || 'request-custom.svg'})` }} />
+								<input onChange={e => setFields({ ...fields, [id]: e.target.value })} id={id} type={inputType(id)} />
 								<label className={st.label + ` ${fields[id] ? st.not_empty : ''}`} htmlFor={id}>{label}</label>
 							</div>
 						)

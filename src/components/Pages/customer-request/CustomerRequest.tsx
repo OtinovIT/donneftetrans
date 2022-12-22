@@ -8,6 +8,30 @@ import { IRequest } from '../../../types/pages/main';
 import Portal from '../../../HOC/Portal';
 import Modal from '../../UI/modal/Modal';
 
+const contentX = {
+	mail: "vreal.idea@gmail.com",
+	fields: [
+		{ id: "name", label: "Full Name", icon: "request-username.svg" },
+		{ id: "phone", label: "Phone Number", icon: "request-phone.svg", required: false },
+		{ id: "mail", label: "E-Mail", icon: "request-mail.svg" },
+		{ id: "request", label: "Request", icon: "request-text.svg" },
+	]
+}
+
+const contentY = {
+	mail: "vreal.idea@gmail.com",
+	fields: [
+		{ id: "name", label: "Full Name", icon: "request-username.svg" },
+		{ id: "phone", label: "Phone Number", icon: "request-phone.svg", required: false },
+		{ id: "mail", label: "E-Mail", icon: "request-mail.svg" },
+		{ id: "request", label: "Request", icon: "request-text.svg" },
+		{ id: "cargo", label: "Cargo" },
+		{ id: "quantity", label: "Quantity, Tons" },
+		{ id: "loading", label: "Loading Port" },
+		{ id: "discharging", label: "Discharging Port" },
+	]
+}
+
 const CustomerRequest: FC<{ content: IRequest[] }> = ({ content }) => {
 	const [isActive, setisActive] = useState(false);
 	const [isModal, setisModal] = useState(false);
@@ -42,8 +66,8 @@ const CustomerRequest: FC<{ content: IRequest[] }> = ({ content }) => {
 	}
 
 	return (<>
-		{isModal &&  <Portal selector="#portal">
-			<Modal setisModal={setisModal} />
+		{isModal && <Portal selector="#portal">
+			<Modal content={contentX} setisModal={setisModal} />
 		</Portal>}
 		<div className={st.wrapper + `${isActive ? ' ' + st.active : ''}`}>
 			<div className={st.bg}>

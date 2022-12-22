@@ -25,26 +25,60 @@
 		],
 		"requests": [
 			{
-				"inputs": [
-					"Full Name",
-					"Phone",
-					"E-mail",
-					"Text"
-				],
-				"address": "mail@gmail.com"
+				"labels": [
+					{
+						"order": 1,
+						"label": "Full Name"
+					},
+					{
+						"order": 2,
+						"label": "Phone Number"
+					},
+					{
+						"order": 3,
+						"label": "E-mail"
+					},
+					{
+						"order": 4,
+						"label": "Request"
+					}
+				]
 			},
 			{
-				"inputs": [
-					"Full Name",
-					"Phone",
-					"E-mail",
-					"Text",
-					"Cargo",
-					"Quantity, tons",
-					"Loading Port",
-					"Discharging Port"
-				],
-				"address": "dmail@gmail.com"
+				"labels": [
+					{
+						"order": 1,
+						"label": "Full Name"
+					},
+					{
+						"order": 2,
+						"label": "Phone Number"
+					},
+					{
+						"order": 3,
+						"label": "E-mail"
+					},
+					{
+						"order": 4,
+						"label": "Request"
+					},
+					{
+						"order": 5,
+						"label": "Cargo"
+					},
+					{
+						"order": 6,
+						"label": "Quantity, Tons"
+					},
+					{
+						"order": 7,
+						"label": "Loading Port"
+					},
+					{
+						"order": 8,
+						"label": "Discharging Port"
+					}
+				]
 			}
 		]
 	},
@@ -74,26 +108,60 @@
 		],
 		"requests": [
 			{
-				"inputs": [
-					"ФИО",
-					"Телефон ",
-					"Почта",
-					"Текст"
-				],
-				"address": "mail@gmail.com"
+				"labels": [
+					{
+						"order": 1,
+						"label": "ФИО"
+					},
+					{
+						"order": 2,
+						"label": "Телефон"
+					},
+					{
+						"order": 3,
+						"label": "Почта"
+					},
+					{
+						"order": 4,
+						"label": "Текст"
+					}
+				]
 			},
 			{
-				"inputs": [
-					"ФИО",
-					"Телефон ",
-					"Почта",
-					"Текст",
-					"Наименование груза",
-					"Количество груза ",
-					"Порт погрузки",
-					"Порт выгрузки "
-				],
-				"address": "dmail@gmail.com"
+				"labels": [
+					{
+						"order": 1,
+						"label": "ФИО"
+					},
+					{
+						"order": 2,
+						"label": "Телефон"
+					},
+					{
+						"order": 3,
+						"label": "Почта"
+					},
+					{
+						"order": 4,
+						"label": "Текст"
+					},
+					{
+						"order": 5,
+						"label": "Наименование груза"
+					},
+					{
+						"order": 6,
+						"label": "Количество груза"
+					},
+					{
+						"order": 7,
+						"label": "Порт погрузки"
+					},
+					{
+						"order": 8,
+						"label": "Порт выгрузки"
+					}
+				]
 			}
 		]
 	}

@@ -20,6 +20,9 @@
 		border-radius: 20px;
 		padding: 20px 20px 20px 30px;
 		border: 1px solid #fff;
+		@media (max-width: 420px) {
+			width: 320px;
+		}
 		.close {
 			position: absolute;
 			background-color: #fff;
@@ -32,7 +35,7 @@
 			color: var(--color-third);
 			line-height: 1.4em;
 			padding: 3px 8px;
-			transition: color .2s, background .2s;
+			transition: color 0.2s, background 0.2s;
 			&:hover {
 				background-color: var(--color-third);
 				color: #fff;
@@ -40,6 +43,17 @@
 		}
 		.heading {
 			text-align: center;
+			display: flex;
+			margin: 0 auto;
+			transform: translateX(-15px);
+			& > span {
+				display: block;
+				width: 20px;
+				height: 20px;
+				margin-right: 5px;
+				transform: translateY(3px);
+				background-image: url(/assets/images/svg/request-circles.svg);
+			}
 			& > h2 {
 				font-family: var(--font-1-semi-bold);
 				color: var(--color-first);

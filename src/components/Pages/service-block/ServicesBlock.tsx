@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React, { FC } from 'react';
 import translate from '../../../i18n/translate';
 import { IMainBlock } from '../../../types/pages/main';
-import helper from '../../../i18n/helpers/index.json';
+import { HMainBlock } from '../../../i18n/helpers/index';
 import st from './ServicesBlock.module.scss';
 import ServiceIcon from '../../UI/service-icon/ServiceIcon';
 import { useAppSelector } from '../../../hooks/redux';
@@ -16,7 +16,7 @@ const ServicesBlock: FC<{ content: IMainBlock[] }> = ({ content }) => {
 			<div className={st.services}>
 				{content.map((service, i) => {
 					const { title, description } = service;
-					const { icon, image } = helper[i];
+					const { icon, image } = HMainBlock[i];
 					return (
 						<div key={i} className={st.service}>
 							<div>
