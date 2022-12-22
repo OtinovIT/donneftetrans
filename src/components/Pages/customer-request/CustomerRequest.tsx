@@ -10,7 +10,7 @@ import Modal from '../../UI/modal/Modal';
 
 const CustomerRequest: FC<{ content: IRequest[] }> = ({ content }) => {
 	const [isActive, setisActive] = useState(false);
-	const [isRequestModal, setisRequestModal] = useState(false);
+	const [isModal, setisModal] = useState(false);
 	const isLaptop = useAppSelector(state => state.content.mediaQuery.isLaptop);
 	const ref = useRef();
 	const isHovering = useHover(ref);
@@ -42,9 +42,9 @@ const CustomerRequest: FC<{ content: IRequest[] }> = ({ content }) => {
 	}
 
 	return (<>
-		<Portal selector="#portal">
-			<Modal />
-		</Portal>
+		{isModal &&  <Portal selector="#portal">
+			<Modal setisModal={setisModal} />
+		</Portal>}
 		<div className={st.wrapper + `${isActive ? ' ' + st.active : ''}`}>
 			<div className={st.bg}>
 				<img src='/assets/images/pages/request-bg.jpg' alt='background 1' />
@@ -68,13 +68,13 @@ const CustomerRequest: FC<{ content: IRequest[] }> = ({ content }) => {
 						<span />
 					</span>
 					<div className={st.firstReq}>
-						<button onClick={() => setisRequestModal(true)}>
+						<button onClick={() => setisModal(true)}>
 							{translate('btn-request.rate', defaultMessages['btn-request.rate'])}
 						</button>
 						<span />
 					</div>
 					<div className={st.secondReq}>
-						<button onClick={() => setisRequestModal(true)}>
+						<button onClick={() => setisModal(true)}>
 							{translate('btn-request.contact', defaultMessages['btn-request.contact'])}
 						</button>
 						<span />

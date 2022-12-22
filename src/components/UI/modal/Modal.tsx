@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { Dispatch, FC, useEffect, useState } from 'react';
 import translate from '../../../i18n/translate';
 import st from './Modal.module.scss';
 
@@ -15,7 +15,7 @@ const content = [
 	{ id: "request", label: "Request", icon: "request-text.svg" },
 ]
 
-const Modal: FC = () => {
+const Modal: FC<any> = ({setisModal}) => {
 	const [fields, setFields] = useState({});
 	const [isLoading, setLoading] = useState(false);
 
@@ -43,6 +43,7 @@ const Modal: FC = () => {
 	return (
 		<div className={st.wrapper}>
 			<div>
+				<button onClick={() => setisModal(false)} className={st.close}>&#10006;</button>
 				<div className={st.heading}>
 					<h2>Request Form</h2>
 				</div>
